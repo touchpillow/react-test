@@ -17,7 +17,7 @@ const init = () => {
   let data;
 
   var canvas = document.getElementById("canvas");
-  var info = document.getElementById("info");
+  // var info = document.getElementById("info");
   console.log(canvas);
 
   ct.width = canvas.width = _width;
@@ -49,10 +49,6 @@ const init = () => {
     var idx = ((x | 0) + (y | 0) * _width) * 4;
     data[idx + 3] = 255;
   }
-  function delPixel(x, y) {
-    var idx = ((x | 0) + (y | 0) * _width) * 4;
-    data[idx + 3] = 0;
-  }
   function faidout() {
     for (var i = 3, l = data.length; i < l; i += 4) {
       var a = data[i];
@@ -75,10 +71,10 @@ const init = () => {
   }
   var last = Date.now(),
     count = 0;
-  setInterval(process, 1000 / FPS);
+  const timer = setInterval(process, 1000 / FPS);
 
   function process() {
-    var dispType = ["時計", "顔文字"];
+    // var dispType = ["時計", "顔文字"];
     ctx.clearRect(0, 0, _width, _height);
     var time = timeDraw();
     if (prev_time !== time) {
@@ -225,7 +221,7 @@ const init = () => {
     count++;
     if (count === FPS) {
       var now = Date.now();
-      var _f = 1000 / ((now - last) / count);
+      // var _f = 1000 / ((now - last) / count);
       count = 0;
       // info.innerHTML =
       //   "FPS " + _f.toFixed(2) + "<br>表示タイプ : " + dispType[nowDisp];
@@ -293,5 +289,11 @@ const init = () => {
       }
     }
   }
+  // function delPixel(x, y) {
+  //   var idx = ((x | 0) + (y | 0) * _width) * 4;
+  //   data[idx + 3] = 0;
+  // }
+  return timer;
 };
+
 export { init };

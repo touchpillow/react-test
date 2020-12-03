@@ -4,9 +4,15 @@ import { init } from "./js";
 export default class Clock extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      timer: null,
+    };
   }
   componentDidMount() {
-    init();
+    this.state.timer = init();
+  }
+  componentWillUnmount() {
+    window.clearInterval(this.state.timer);
   }
   render() {
     return (
