@@ -3,16 +3,17 @@ import "./App.css";
 
 // import Clock from "./components/clock";
 // import Page1 from "./components/page1";
-// import CanvasTool from "./components/canvas";
-import MoveCom from "./components/move";
+import CanvasTool from "./components/canvas";
+// import MoveCom from "./components/move";
 import "antd/dist/antd.css";
 function App() {
   return (
     <div className="App">
       {/* <div className="asdfa">112</div> */}
-      <MoveCom></MoveCom>
+      {/* <MoveCom></MoveCom> */}
       {/* <Page1></Page1> */}
       {/* <Clock></Clock> */}
+      {<CanvasTool />}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
