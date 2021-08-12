@@ -1,0 +1,72 @@
+.tool-item {
+  width: 40px;
+  height: 24px;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tool-item + .tool-item {
+  margin-left: 16px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 48px;
+}
+.cur-tool {
+  border-color: #4d81ef;
+}
+.tools {
+  display: flex;
+  width: 500px;
+}
+
+.container {
+  width: 1000px;
+  /* height: 1000px; */
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.text {
+  white-space: nowrap;
+  margin-right: 8px;
+}
+.move-canvas {
+  cursor: grab;
+}
+.cur-move {
+  filter: drop-shadow(16px 0 #4d81ef);
+  border-right: 16px solid transparent;
+  position: relative;
+  left: -8px;
+}
+.img-box {
+  overflow: hidden;
+  width: 16px;
+  min-width: 16px;
+}
+.canvas-box {
+  width: 1000px;
+  height: 750px;
+  /* border: 1px solid #000; */
+  /* border-radius: 4px; */
+  /* overflow: hidden; */
+}
+.header-right {
+  /* width: 200px; */
+  display: flex;
+  align-items: center;
+}
+.footer {
+  margin-top: 20px;
+}
+.action-btn + .action-btn {
+  margin-left: 16px;
+}
+.canvas-content {
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
